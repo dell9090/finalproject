@@ -1,0 +1,119 @@
+{
+  "project_info": {
+    "project_number": "1017960238494",
+    "firebase_url": "https://neu-winter2019.firebaseio.com",
+    "project_id": "neu-winter2019",
+    "storage_bucket": "neu-winter2019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017960238494:android:ebb1ad599c6edb8b",
+        "android_client_info": {
+          "package_name": "com.jackeyli.garagesale"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017960238494-4o0d7m4nki9ves7ja0gej07r7p2utpm5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzKHt6ACm6TOvKUs_EEdMRzeEKuRbJ6CY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017960238494-4o0d7m4nki9ves7ja0gej07r7p2utpm5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1017960238494-6mh34vb0c62anf57kdlvof5cgcngaknn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.jackeyli.garagesale"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017960238494:android:8111080020964f7e",
+        "android_client_info": {
+          "package_name": "com.neu.garagesale"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017960238494-4o0d7m4nki9ves7ja0gej07r7p2utpm5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzKHt6ACm6TOvKUs_EEdMRzeEKuRbJ6CY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017960238494-4o0d7m4nki9ves7ja0gej07r7p2utpm5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1017960238494-6mh34vb0c62anf57kdlvof5cgcngaknn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.jackeyli.garagesale"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017960238494:android:16775aed65e26365",
+        "android_client_info": {
+          "package_name": "com.neu.winter2019"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017960238494-4o0d7m4nki9ves7ja0gej07r7p2utpm5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzKHt6ACm6TOvKUs_EEdMRzeEKuRbJ6CY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017960238494-4o0d7m4nki9ves7ja0gej07r7p2utpm5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1017960238494-6mh34vb0c62anf57kdlvof5cgcngaknn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.jackeyli.garagesale"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,8 @@
 # INFO6350 FinalProject
 
 HyperGarageSale
+## Teammate
+Xin Liu, NUID:001417847
 
 ## Requirements and Steps
 1: HyperGarageSale - Menus and Notifications

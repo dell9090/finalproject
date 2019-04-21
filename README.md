@@ -1,7 +1,8 @@
 # INFO6350 FinalProject
 
 HyperGarageSale
-## Teammate
+
+## Team member
 Xin Liu, NUID:001417847
 
 ## Requirements and Steps

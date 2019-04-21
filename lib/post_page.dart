@@ -13,25 +13,6 @@ import 'browse_page.dart';
 import 'structure.dart';
 import 'login_page.dart';
 
-Future<void> main() async{
-
-  final cameras = await availableCameras();
-  final firstCamera = cameras.first;
-  final FirebaseStorage storage = new FirebaseStorage();
-
-  runApp(MaterialApp(
-    title: 'My App',
-    //home: MainPage(),
-    home: LoginPage(),
-    routes: {
-      PostPage.routeName: (context) => new PostPage(),
-      TakePictureScreen.routeName : (context) => new TakePictureScreen(camera: firstCamera),
-      BrowsePage.routeName: (context) => new BrowsePage(),
-      LoginPage.routeName: (context) => new LoginPage(),
-    },
-  ));
-}
-
 class PostPage extends StatefulWidget {
   static String routeName = "/postPage";
   final FirebaseStorage storage;

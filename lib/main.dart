@@ -1,6 +1,7 @@
 import 'login_page.dart';
 import 'browse_page.dart';
 import 'post_page.dart';
+import 'forget_password_page.dart';
 
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
@@ -21,6 +22,7 @@ Future<void> main() async{
       TakePictureScreen.routeName : (context) => new TakePictureScreen(camera: firstCamera),
       BrowsePage.routeName: (context) => new BrowsePage(),
       LoginPage.routeName: (context) => new LoginPage(),
+      ForgetPage.routeName: (context) => new ForgetPage(),
     },
   ));
 }

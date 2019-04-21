@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'browse_page.dart';
+import 'forget_password_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginPage extends StatefulWidget {
   static String routeName = '/loginPage';
@@ -8,6 +10,11 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  String _email, _password;
+
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  var _sKey = GlobalKey<ScaffoldState>();
 
   Widget logoSection() {
     return new Hero(
@@ -22,9 +29,14 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget userNameSection() {
     return new TextFormField(
+      validator: (input){
+        if(input.isEmpty) {
+          return 'Please enter your email';
+        }
+      },
       keyboardType: TextInputType.emailAddress,
       autofocus: false,
-      initialValue: 'suyie001@gmail.com',
+      initialValue: 'liux3721@gmail.com',
       decoration: new InputDecoration(
           hintText: 'Email',
           contentPadding: new EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
@@ -32,13 +44,19 @@ class _LoginPageState extends State<LoginPage> {
               borderRadius: BorderRadius.circular(32.0)
           )
       ),
+      onSaved: (input) => _email = input,
     );
   }
 
   Widget passwordSection() {
     return new TextFormField(
+      validator: (input) {
+        if(input.length < 6){
+          return "Longer password required";
+        }
+      },
       autofocus: false,
-      initialValue: 'some password',
+      initialValue: 'liux3721',
       obscureText: true,
       decoration:  new InputDecoration(
           hintText: 'Password',
@@ -47,6 +65,7 @@ class _LoginPageState extends State<LoginPage> {
               borderRadius: BorderRadius.circular(32.0)
           )
       ),
+      onSaved: (input) => _password = input,
     );
   }
 
@@ -61,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
           minWidth: 200.0,
           height: 42.0,
           onPressed: (){
-            Navigator.of(context).pushNamed(BrowsePage.routeName);
+             singIn();
           },
           color: Colors.blue,
           child: new Text('Log In',style: new TextStyle(color: Colors.white),),
@@ -70,33 +89,65 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
+  Widget forgetPasswordSection() {
+    return new FlatButton(
+      onPressed: (){
+        Navigator.of(context).pushNamed(ForgetPage.routeName);
+      },
+      child: new Text('Forget Password?',style: new TextStyle(color: Colors.black54),),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
 
     return new Scaffold(
+      key: _sKey,
       backgroundColor: Colors.white,
       body: new Center(
-        child: new Center(
-          child: new ListView(
-            shrinkWrap: true,
-            padding: new EdgeInsets.only(left: 24.0,right: 24.0),
-            children: <Widget>[
-              logoSection(),
-              SizedBox(height: 48.0),
-              userNameSection(),
-              SizedBox(height: 8.0,),
-              passwordSection(),
-              SizedBox(height: 24.0,),
-              buttonSection(),
+            child: new ListView(
+              shrinkWrap: true,
+              padding: new EdgeInsets.only(left: 24.0,right: 24.0),
+              children: <Widget>[
+                Form(
+                  key: _formKey,
+                  child: Column(
+                    children: <Widget>[
+                      logoSection(),
+                      SizedBox(height: 48.0),
+                      userNameSection(),
+                      SizedBox(height: 8.0,),
+                      passwordSection(),
+                    ],
+                  ),
+                ),
 
-              new FlatButton(
-                onPressed: (){},
-                child: new Text('Forget Password?',style: new TextStyle(color: Colors.black54),),
-              ),
-            ],
+                SizedBox(height: 24.0,),
+                buttonSection(),
+                forgetPasswordSection(),
+
+              ],
+            ),
           ),
-        ),
-      ),
     );
   }
+
+
+  void singIn() async {
+    if (_formKey.currentState.validate()) {
+      _formKey.currentState.save();
+      try {
+        FirebaseUser user = await FirebaseAuth.instance.signInWithEmailAndPassword(
+            email: _email, password: _password);
+        Navigator.of(context).pushNamedAndRemoveUntil(
+            BrowsePage.routeName, (Route<dynamic> route) => false);
+      } catch(e) {
+        final snackBar = SnackBar(
+          content: Text(e.message),
+        );
+        _sKey.currentState.showSnackBar(snackBar);
+      }
+    }
+  }
 }
+

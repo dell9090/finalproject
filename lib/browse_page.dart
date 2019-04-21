@@ -5,7 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'post_page.dart';
 import 'style.dart';
 import 'structure.dart';
-
+import 'login_page.dart';
 
 class BrowsePage extends StatefulWidget {
   static String routeName = "/browsePage";
@@ -27,6 +27,22 @@ class _BrowsePageState extends State<BrowsePage> {
       key: _browseScaffoldKey,
       appBar: new AppBar(
         title: new Text("BrowsePost", style: new TextStyle(color: Colors.white)),
+        backgroundColor: Colors.blue,
+        iconTheme: new IconThemeData(color: Colors.white),
+        actions: <Widget>[
+          new FlatButton(
+              onPressed: (){
+                Navigator.of(context).pushNamedAndRemoveUntil(LoginPage.routeName, (Route<dynamic> route) => false);
+              },
+              child: Text(
+                "Log Out",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+          ),
+        ],
       ),
       body: GetPosts(),
 

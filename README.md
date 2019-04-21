@@ -37,9 +37,17 @@ HyperGarageSale
 
         
 ##Screenshots
-![browse](https://github.com/dell9090/finalproject/raw/master/Screenshots/browse.png)
-![browseDetial](https://github.com/dell9090/finalproject/raw/master/Screenshots/browseDetial.png)
-![forgetPassword](https://github.com/dell9090/finalproject/raw/master/Screenshots/forgetPassword.png)
-![fullPicture](https://github.com/dell9090/finalproject/raw/master/Screenshots/fullPicture.png)
-![post1](https://github.com/dell9090/finalproject/raw/master/Screenshots/post1.png)
-![post2](https://github.com/dell9090/finalproject/raw/master/Screenshots/post2.png)
+<div align="center">
+<img src="https://github.com/dell9090/finalproject/raw/master/Screenshots/browse.png" height="300px" alt="browse" >
+<img src="https://github.com/dell9090/finalproject/raw/master/Screenshots/browseDetial.png" height="300px" alt="browseDetial" >    
+</div>
+
+<div align="center">
+<img src="https://github.com/dell9090/finalproject/raw/master/Screenshots/forgetPassword.png" height="300px" alt="forgetPassword" >
+<img src="https://github.com/dell9090/finalproject/raw/master/Screenshots/fullPicture.png" height="300px" alt="fullPicture" > </div>
+
+<div align="center">
+<img src="https://github.com/dell9090/finalproject/raw/master/Screenshots/post1.png" height="300px" alt="post1" >
+<img src="https://github.com/dell9090/finalproject/raw/master/Screenshots/post2.png" height="300px" alt="post2" >
+</div>
+

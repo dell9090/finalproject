@@ -56,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
         }
       },
       autofocus: false,
-      initialValue: 'liux3721',
+      initialValue: 'a123456',
       obscureText: true,
       decoration:  new InputDecoration(
           hintText: 'Password',

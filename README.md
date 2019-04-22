@@ -6,8 +6,7 @@ HyperGarageSale
 Xin Liu, NUID:001417847
 
 ## Test Devices
-Use Android Virtual Devices to simuluat
-Pixel 2 with Android 9.0(API 28)
+Use Android Virtual Devices to simulate. Pixel 2 (5.0 1080 * 1920) with Android 9.0(API 28)
 
 ## Requirements and Steps
 1: HyperGarageSale - Menus and Notifications

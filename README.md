@@ -5,6 +5,10 @@ HyperGarageSale
 ## Team member
 Xin Liu, NUID:001417847
 
+## Test Devices
+Use Android Virtual Devices to simuluat
+Pixel 2 with Android 9.0(API 28)
+
 ## Requirements and Steps
 1: HyperGarageSale - Menus and Notifications
 (1) Add a SnackBar that comes up when a new post has been added.

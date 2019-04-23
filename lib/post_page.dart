@@ -47,9 +47,11 @@ class _PostPageState extends State<PostPage> {
   }
 
   void _inputphoto(String path) {
-    photoList.add(path);
-    ifPhoto = true;
-    print("rebuild path:  ${path}");
+    if (path != null) {
+      photoList.add(path);
+      ifPhoto = true;
+      print("rebuild path:  ${path}");
+    }
   }
 
   Future<String> _uploadFile(String path) async {
@@ -350,7 +352,7 @@ class TakePictureScreenState extends State<TakePictureScreen> {
             Navigator.of(context).pop(path);
 
           } catch (e) {
-            print(e);
+              print(e);
           }
         },
       ),
